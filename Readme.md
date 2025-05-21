@@ -1,21 +1,7 @@
-# Homework 1
-
-
-## Submission instructions
-
-* Expected time commitment: 4-8 hrs
-
-* Carmen submission:
-Submit one .zip file named HW1_programming_name_number.zip (e.g., HW1_programming_chao_209.zip), which contains
-1) a .py file with the search algorithms you implemented: `search.py`;
-2) a `collaboration.txt` which lists with whom you have discussed the homework (see more details below).
-
-* Collaboration: You may discuss with your classmates. However, you need to write your own solutions and submit them separately. In your submission, you need to list with whom you have discussed the homework in a .txt file `collaboration.txt`. Please list each classmate’s name.number (e.g., chao.209) as a row in the .txt file. That is, if you discussed with two classmates, your .txt file will have two rows.
-
 
 ## Introduction
 
-In this homework, you are to implement four search algorithms --- DFS, BFS, UCS, and A* --- in `search.py` so that a Pacman planning agent can complete the search problem. You are to implement the "graph" search rather than the "tree" search version.
+In this project, I implement four search algorithms --- DFS, BFS, UCS, and A* --- in `search.py` so that a Pacman planning agent can complete the search problem. I chose to implement the "graph" search rather than the "tree" search version.
 
 Download or clone this repository. This code, and the idea for the assignment, comes from [UC Berkeley](https://inst.eecs.berkeley.edu//~cs188/pacman/home.html).
 
@@ -39,15 +25,6 @@ python3 py/pacman.py --layout tinyMaze --pacman GoWestAgent
 python3 py/pacman.py --layout tinyMaze --pacman GoWestAgent
 ```
 
-### Possible errors and notes
-If you're unable to run `pacman.py` or get its graphics to work, or if you're getting an error about "tkinter" or "_tkinter", that's okay. As long as you can run autograder.py, you should be able to complete the assignment fully.
-
-We note that, the provided commands are designed to work with Mac/Linux with Python version 3. If you use Windows, we recommend that you run the code in the Windows command line (CMD), and make the following changes:
-* Please use `\` instead of `/` while specifying the path to the file.
-* If it still does not work, you may use `py -3` instead of `python3` in the command you're executing on CMD. An example command that works for us is `py -3 py\autograder.py`.
-* We suggest that you run the code on Command Line. You may use editors like VSCode to write your code.
-
-
 ## Implementation (in `search.py`)
 * Please use python3 and write your own solutions from scratch. Do not import any packages yourself except for those we have included and specified.
 
@@ -62,12 +39,10 @@ We note that, the provided commands are designed to work with Mac/Linux with Pyt
 ```
 python3 py/autograder.py
 ```
-* The full grade shown in the autograder is 35, while the full grade of your programming part is 50.
-
 * Please also read **Other information** at the end of this page for some other hints.
 
 
-## Task 1 (12.5 pts): Depth-First Search (DFS)
+## Task 1: Depth-First Search (DFS)
 
 Open the file `py/search.py` and find the function [`depthFirstSearch`](./py/search.py#L70).
 
@@ -81,7 +56,7 @@ You can test it with Pacman by running the following command:
 python3 py/pacman.py -l mediumMaze -p SearchAgent -a fn=dfs
 ```
 
-## Task 2 (12.5 pts): Breadth-First Search (BFS)
+## Task 2: Breadth-First Search (BFS)
 
 Open the file `py/search.py` and and find the function [`breadthFirstSearch`](./py/search.py#L90).
 
@@ -96,11 +71,9 @@ python3 py/pacman.py -l mediumMaze -p SearchAgent -a fn=bfs
 ```
 
 
-## Task 3 (12.5 pts): Uniform Cost Search (UCS)
+## Task 3: Uniform Cost Search (UCS)
 
 Open the file `py/search.py` and find the function  [`uniformCostSearch`](./py/search.py#L96).
-
-Take the template and finish the code (at "YOUR CODE HERE") so that UCS works.
 
 You can test it with Pacman by running the following command:
 
@@ -142,28 +115,9 @@ python3 py/pacman.py -l mediumMaze -p SearchAgent -a fn=astar,heuristic=manhatta
 
 ```
 
-## Other information
 
-### Evaluation
-
-Your code will be autograded for technical correctness. Please do not change the names of any provided functions or classes within the code, or you will wreak havoc on the autograder. However, the correctness of your implementation -- not the autograder's judgements -- will be the final judge of your score.
-
-* Discussion: Please be careful not to post spoilers.
-* Helpful Reading: [Path Finding Algorithms](https://medium.com/omarelgabrys-blog/path-finding-algorithms-f65a8902eb40),  [BFS and DFS](https://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/)
-
-
-### Important Tips
-
-Keep these things in mind while working on your solutions!
-* All of your search functions need to return a list of actions that will lead the agent from the start to the goal. These actions all have to be legal moves (valid directions, no moving through walls).
-* Make sure to use the `Stack`, `Queue`, `PriorityQueue`, or the `heaps` (as mentioned in Task 3, Useful Python code) data structures provided to you in `py/util.py`! These data structure implementations have particular properties which are required for compatibility with the autograder. Note that, you can use `PriorityQueue` or `heaps` to implement `Stack` and `Queue`.
-* Get familiar with the methods in the `SearchProblem` class in `py/search.py`! You'll need to use these methods as part of your search implementations.
-* Remember that lists in Python are passed by reference; if you're seeing that actions show up in a list that shouldn't be there, make sure you're copying your actions to a new list every time!
-* The autograder is not the final word! It is very possible to correctly implement these algorithms, but have the autograder consider it wrong because you didn't use the right data structures or methods. Final grades will be assigned by examining your implementation, not just using the autograder output.
-
-
-####  Files you'll edit and submit:
-* `py/search.py`: Where your search algorithms will reside.
+####  Files I edited and submitted:
+* `py/search.py`: Where the search algorithms reside.
 
 #### Files you'll want to take a look at:
 * `py/searchAgents.py`: Where all search-based agents are defined.
